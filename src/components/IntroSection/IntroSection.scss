@@ -1,0 +1,63 @@
+.content-wrapper {
+  padding: 100px 100px;
+  background-color: #111111;
+}
+
+.page-intro {
+  display: flex;
+  flex-direction: row;
+
+  &__3d-model {
+    width: 50%;
+    border: solid 3px white;
+  }
+
+  &__info {
+    padding-left: 20px;
+    width: 50%;
+
+    &-title {
+      letter-spacing: .5px;
+      margin-bottom: 20px;
+      font-size: 40px;
+      font-weight: bold;
+      color: white;
+      line-height: 1.5;
+    }
+
+    &-description {
+      margin-bottom: 32px;
+      font-size: 18px;
+      font-weight: 500;
+      color: #888888;
+      line-height: 1.5;
+    }
+
+    &-description:last-child{
+      margin-bottom: 0;
+    }
+  }
+
+  &__add-button {
+    margin-bottom: 30px;
+    background-color: #2f55d4;
+    border: none;
+    border-radius: 10px;
+    width: 120px;
+    height: 40px;
+
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    transition: opacity .3s;
+  }
+
+  &__add-button:hover {
+    opacity: 0.8;
+  }
+
+  &__add-button:active {
+    background-color: #2848c0;
+  }
+}
