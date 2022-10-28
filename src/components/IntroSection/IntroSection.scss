@@ -1,11 +1,10 @@
 .content-wrapper {
-  padding: 100px 100px;
+  padding: 100px 100px 0;
   background-color: #111111;
 }
 
-.page-intro {
+.intro-section {
   display: flex;
-  flex-direction: row;
 
   &__3d-model {
     width: 50%;
@@ -28,6 +27,7 @@
     &-description {
       margin-bottom: 32px;
       font-size: 18px;
+      letter-spacing: .3px;
       font-weight: 500;
       color: #888888;
       line-height: 1.5;
