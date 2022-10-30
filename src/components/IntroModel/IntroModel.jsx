@@ -1,8 +1,8 @@
 import React, { Suspense } from 'react';
-import { Canvas } from "@react-three/fiber";
+import { Canvas } from '@react-three/fiber';
 import { Ethereum } from '../Models/Ethereum';
-import { WhitePill } from "../Models/WhitePill";
-import { BluePill } from "../Models/BluePill";
+import { WhitePill } from '../Models/WhitePill';
+import { BluePill } from '../Models/BluePill';
 
 import './IntroModel.scss';
 
