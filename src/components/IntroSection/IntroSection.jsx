@@ -1,4 +1,5 @@
 import React from 'react';
+import IntroModel from '../IntroModel/IntroModel';
 
 import './IntroSection.scss';
 
@@ -6,7 +7,9 @@ function IntroSection() {
   return (
     <div className="content-wrapper">
       <div className="intro-section">
-        <div className="intro-section__3d-model"></div>
+        <div className="intro-section__3d-model">
+          <IntroModel />
+        </div>
         <div className="intro-section__info">
           <div className="intro-section__info-title">
             <span style={{color: "#2f55d4"}}>BaccaratHelper</span> - веб расширение
