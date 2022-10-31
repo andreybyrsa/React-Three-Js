@@ -13,7 +13,7 @@ export function Ethereum(props) {
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Scene">
-        <mesh name="Ethereum" geometry={nodes.Ethereum.geometry} position={[0, 0, 0]} scale={[0.51, 0.01, 0.51]}>
+        <mesh name="Ethereum" geometry={nodes.Ethereum.geometry} position={[0, -0.1, 0]} scale={[0.51, 0.01, 0.51]}>
           <meshStandardMaterial color="white"/>
         </mesh>
       </group>

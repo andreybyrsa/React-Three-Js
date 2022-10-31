@@ -1,5 +1,4 @@
 .intro-model-wrapper {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,23 +8,26 @@
 
 .model {
   &__ethereum {
-    position: absolute;
   }
 
   &__white-pill {
     transform: rotate(90deg);
-    position: absolute;
-    left: 65px;
-    height: 200px;
+    width: 250px;
   }
 
   &__blue-pill {
     transform: rotate(-90deg);
-    position: absolute;
-    right: 65px;
-    top: 35px;
-    height: 200px;
-    margin-top: 0;
+    width: 250px;
   }
 }
 
+//@media (max-width: 2300px) {
+//  .model__white-pill {
+//    left: 230px;
+//  }
+//
+//  .model__blue-pill {
+//    right: 230px;
+//    top: 35px;
+//  }
+//}

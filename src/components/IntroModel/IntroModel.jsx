@@ -11,7 +11,7 @@ function IntroModel() {
     <div className="intro-model-wrapper">
 
       <div className="model__white-pill">
-        <Canvas style={{width: '275px', height: '250px',}}  camera={{position: [0, 1, 5], zoom: 3}}>
+        <Canvas style={{width: '250px', height: '250px',}}  camera={{position: [0, 1, 5], zoom: 3.5}}>
           <ambientLight intensity={0.3}/>
           <spotLight intensity={0.3} angle={0.1} penumbra={1} position={[5, 25, 2]}/>
           <Suspense fallback={null}>
@@ -21,7 +21,7 @@ function IntroModel() {
       </div>
 
       <div className="model__ethereum">
-        <Canvas style={{width: '100px', height: '120px',}} camera={{position: [0, 1, 5], zoom: 5}}>
+        <Canvas style={{width: '110px', height: '150px',}} camera={{position: [0, 1, 5], zoom: 5}}>
           <ambientLight intensity={0.3}/>
           <spotLight intensity={0.3} angle={0.1} penumbra={1} position={[5, 25, 2]}/>
           <Suspense fallback={null}>
@@ -31,7 +31,7 @@ function IntroModel() {
       </div>
 
       <div className="model__blue-pill">
-        <Canvas style={{width: '275px', height: '250px',}}  camera={{position: [0, 1, 5], zoom: 3}}>
+        <Canvas style={{width: '250px', height: '250px',}}  camera={{position: [0, 1, 5], zoom: 3.5}}>
           <ambientLight intensity={0.3}/>
           <spotLight intensity={0.3} angle={0.1} penumbra={1} position={[5, 25, 2]}/>
           <Suspense fallback={null}>
