@@ -1,0 +1,29 @@
+.content-wrapper:last-child {
+  background-color: #111111;
+  padding: 0 100px;
+  border-top: 1px solid #888888;
+}
+
+.footer-section {
+  &__info {
+    display: flex;
+    margin-right: 10px;
+    font-size: 17px;
+    letter-spacing: .3px;
+    font-weight: normal;
+    color: #888888;
+    line-height: 1.5;
+  }
+
+  &__link {
+    display: flex;
+    margin: 0 6px;
+    color: #007bff;
+    font-weight: 500;
+  }
+
+  &__link:hover {
+    opacity: 0.8;
+  }
+
+}
