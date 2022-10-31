@@ -7,7 +7,10 @@ export function BluePill(props) {
   const { nodes, materials } = useGLTF('/WhitePill/WhitePill.gltf');
 
   useFrame(() => {
-    group.current.rotation.y += 0.02;
+    function rotate() {
+      group.current.rotation.y += 0.02;
+    }
+    setTimeout(rotate, 100);
   }, []);
 
   return (
