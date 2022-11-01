@@ -1,4 +1,4 @@
-.content-wrapper {
+.game-content-wrapper {
   padding: 100px 100px 0;
   background-color: #111111;
 }
@@ -6,7 +6,6 @@
 .game-section {
   display: flex;
   flex-direction: column;
-  align-items: center;
 
   &__title {
     margin-bottom: 20px;
@@ -17,7 +16,7 @@
   }
 
   &__description {
-    width: 45%;
+    width: 80%;
     margin-bottom: 30px;
     text-align: center;
     font-size: 17px;
@@ -39,6 +38,13 @@
     width: 60%;
   }
 
+  &__game-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+  }
+
   &__game-controls {
     display: flex;
     align-items: center;
@@ -46,7 +52,6 @@
   }
 
   &__game-description {
-    width: 70%;
     margin: 20px 0;
     text-align: center;
     font-size: 17px;

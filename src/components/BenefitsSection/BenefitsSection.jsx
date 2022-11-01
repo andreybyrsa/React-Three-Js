@@ -13,7 +13,7 @@ const benefits = [
 
 function BenefitsSection() {
   return (
-    <div className="content-wrapper">
+    <div className="benefits-content-wrapper">
       <div className="benefits-section">
         <div className="benefits-section__title">Наши преимущества</div>
         <div className="benefits-section__description">

@@ -9,12 +9,12 @@ const authors = [
   {id: 1, name: 'AndreyByrsa', link: 'https://github.com/andreybyrsa',},
   {id: 2, name: 'KirillVlasov', link: 'https://github.com/kivaX9',},
   {id: 3, name: 'TimurMinyazev', link: 'https://github.com/TimurMA',},
-  {id: 4, name: 'MamedBayramov', link: 'https://github.com/cap111ffs',},
+  {id: 4, name: 'MamedagaBayramov', link: 'https://github.com/cap111ffs',},
 ]
 
 function FooterSection() {
   return (
-    <div className="content-wrapper">
+    <div className="footer-content-wrapper">
       <div className="footer-section">
         <div style={{padding: '30px 0',}}>
           <span className="footer-section__info">

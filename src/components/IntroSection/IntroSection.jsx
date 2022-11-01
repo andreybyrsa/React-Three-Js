@@ -5,7 +5,7 @@ import './IntroSection.scss';
 
 function IntroSection() {
   return (
-    <div className="content-wrapper">
+    <div className="intro-content-wrapper">
       <div className="intro-section">
         <div className="intro-section__3d-model">
           <IntroModel />
