@@ -1,14 +1,18 @@
 import React from 'react';
+import GameModel from '../GameModel/GameModel';
 
 import './GameSection.scss';
 
 function GameSection() {
+
   return (
     <div className="game-content-wrapper">
       <div className="game-section">
 
         <div className="game-section__game-content">
-          <div className="game-section__game-3d-model"></div>
+          <div className="game-section__game-3d-model">
+            <GameModel />
+          </div>
           <div className="game-section__game-info">
             <div className="game-section__title">Демо-режим</div>
             <div className="game-section__description">

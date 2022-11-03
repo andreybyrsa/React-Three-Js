@@ -1,5 +1,5 @@
 .game-content-wrapper {
-  padding: 100px 100px 0;
+  padding: 120px 150px 100px;
   background-color: #111111;
 }
 
@@ -18,7 +18,6 @@
   &__description {
     width: 80%;
     margin-bottom: 30px;
-    text-align: center;
     font-size: 17px;
     letter-spacing: .3px;
     font-weight: normal;
@@ -29,26 +28,29 @@
   &__game-content {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     width: 100%;
     height: 300px;
   }
 
   &__game-3d-model {
-    border: 3px solid white;
-    width: 60%;
+    border-radius: 10px;
+    box-shadow: 2px 2px 70px 10px #2f55d4;
+    width: 50%;
   }
 
   &__game-info {
+    padding-left: 40px;
     display: flex;
+    justify-content: center;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     width: 40%;
   }
 
   &__game-controls {
     display: flex;
     align-items: center;
-    flex-direction: column;
   }
 
   &__game-description {
@@ -62,7 +64,7 @@
   }
 
   &__game-button {
-    margin-bottom: 20px;
+    margin-right: 20px;
     background-color: #2f55d4;
     border: none;
     border-radius: 10px;
@@ -78,7 +80,7 @@
   }
 
   &__game-button:last-child {
-    margin-bottom: 0;
+    margin-right: 0;
   }
 
   &__game-button:hover {

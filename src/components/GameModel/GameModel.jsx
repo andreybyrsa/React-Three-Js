@@ -1,21 +1,22 @@
 import React, { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { Ethereum } from '../Models/Ethereum';
+import { Coin } from '../Models/Coin';
+
 import { KeyLight, FillLight, RimLight } from '../Models/Light';
 
-import './IntroModel.scss';
+import './GameModel.scss';
 
-function IntroModel() {
+function GameModel() {
   return (
-    <div className="intro-model-wrapper">
+    <div className="game-model-wrapper">
 
-      <div className="model__ethereum">
-        <Canvas style={{width: '400px', height: '450px',}} camera={{position: [0, 1, 5], zoom: 3.5}}>
+      <div className="model__coin">
+        <Canvas style={{width: '300px', height: '300px',}} camera={{position: [0, 0, 5], zoom: 3.5}}>
           <FillLight brightness={2} color={"#2690ff"} />
           <RimLight brightness={54} color={"#ffffff"} />
           <KeyLight brightness={1} color={"#b560ff"} />
           <Suspense fallback={null}>
-            <Ethereum />
+            <Coin />
           </Suspense>
         </Canvas>
       </div>
@@ -25,4 +26,4 @@ function IntroModel() {
   );
 }
 
-export default IntroModel;
+export default GameModel;
