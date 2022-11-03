@@ -11,12 +11,12 @@
     margin-bottom: 20px;
     font-size: 28px;
     font-weight: 700;
-    text-align: center;
+    text-align: start;
     color: white;
   }
 
   &__description {
-    width: 80%;
+    width: 90%;
     margin-bottom: 30px;
     font-size: 17px;
     letter-spacing: .3px;
@@ -44,23 +44,12 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    align-items: start;
     width: 40%;
   }
 
   &__game-controls {
     display: flex;
     align-items: center;
-  }
-
-  &__game-description {
-    margin: 20px 0;
-    text-align: center;
-    font-size: 17px;
-    letter-spacing: .3px;
-    font-weight: normal;
-    color: #888888;
-    line-height: 1.5;
   }
 
   &__game-button {
