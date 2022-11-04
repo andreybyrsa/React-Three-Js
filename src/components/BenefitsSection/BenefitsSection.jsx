@@ -18,7 +18,7 @@ function BenefitsSection() {
         <div className="benefits-section__title">Наши преимущества</div>
         <div className="benefits-section__description">
           Мы предлагаем расширение, которое поможет снизить риск проигрыша
-          в карточной онлайн игре. Среди всех наших преимуществ можно выделить:
+          в карточной онлайн игре.
         </div>
         <div className="benefits-section__benefits-items">
           {benefits.map((elem) => {

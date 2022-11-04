@@ -6,7 +6,19 @@
   height: 100%;
 }
 
-.model {
-  &__ethereum {
+.model-ethereum {
+  width: 400px;
+  height: 450px;
+}
+
+@media (max-width: 1200px) {
+  .model-ethereum {
+    height: 400px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .model-ethereum {
+    height: 350px;
   }
 }

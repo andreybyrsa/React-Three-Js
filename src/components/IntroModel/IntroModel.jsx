@@ -9,8 +9,8 @@ function IntroModel() {
   return (
     <div className="intro-model-wrapper">
 
-      <div className="model__ethereum">
-        <Canvas style={{width: '400px', height: '450px',}} camera={{position: [0, 1, 5], zoom: 3.5}}>
+      <div className="model-ethereum">
+        <Canvas camera={{position: [0, 1, 5], zoom: 3.5}}>
           <FillLight brightness={2} color={"#2690ff"} />
           <RimLight brightness={54} color={"#ffffff"} />
           <KeyLight brightness={1} color={"#b560ff"} />

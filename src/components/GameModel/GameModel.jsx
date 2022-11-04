@@ -10,8 +10,8 @@ function GameModel() {
   return (
     <div className="game-model-wrapper">
 
-      <div className="model__coin">
-        <Canvas style={{width: '300px', height: '300px',}} camera={{position: [0, 0, 5], zoom: 3.5}}>
+      <div className="model-coin">
+        <Canvas camera={{position: [0, 0, 5], zoom: 3.5}}>
           <FillLight brightness={2} color={"#2690ff"} />
           <RimLight brightness={54} color={"#ffffff"} />
           <KeyLight brightness={1} color={"#b560ff"} />
