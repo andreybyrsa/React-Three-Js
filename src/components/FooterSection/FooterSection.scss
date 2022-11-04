@@ -20,10 +20,7 @@
   }
 
   &__links {
-    height: 35px;
-    overflow-y: scroll;
     display: flex;
-    flex-direction: column;
   }
 
   &__link {
@@ -77,5 +74,10 @@
 
   .hide {
     display: none;
+  }
+  .footer-section__links {
+    height: 35px;
+    overflow-y: scroll;
+    flex-direction: column;
   }
 }
