@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useRef, useState} from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import GameModel from '../GameModel/GameModel';
 
 import './GameSection.scss';
@@ -63,10 +63,10 @@ function GameSection() {
     }
   }, [results])
 
-  const startGame = useCallback(() => {
+  const startGame = () => {
     const randomValue = Math.floor(Math.random() * 2) + 1;
     setResults([...resultsRef.current, randomValue]);
-  }, [results]);
+  }
 
   return (
     <div className="game-content-wrapper">
