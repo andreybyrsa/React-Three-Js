@@ -11,7 +11,7 @@ function GameSection() {
 
   useEffect(() => {
     const resultsArray = [];
-    for (let i = 0; i < 50; i++ ) {
+    for (let i = 0; i < 25; i++ ) {
       const randomValue = Math.floor(Math.random() * 2) + 1;
       resultsArray.push(randomValue);
     }
@@ -25,15 +25,14 @@ function GameSection() {
     let result = document.createElement('div');
     result.innerHTML = '⬤';
     result.className = (currentArray[0] === 1) ? 'circle-1' : 'circle-2';
-    if (currentArray.length > 50) {
+    if (currentArray.length > 25) {
       for (let i = 1; i < currentArray.length; i++) {
         if (currentArray[i] !== currentArray[i - 1]) {
           column += 1
         }
       }
 
-      for (let i = 50; i < currentArray.length; i++) {
-        console.log(currentArray);
+      for (let i = 25; i < currentArray.length; i++) {
         result.className = (currentArray[i] === 1) ? 'circle-1' : 'circle-2';
         if (currentArray[i] === currentArray[i - 1]) {
           document.getElementById(`result-${column}`).insertAdjacentElement('beforeend', result);
@@ -44,7 +43,7 @@ function GameSection() {
       }
     }
 
-    if (currentArray.length === 50) {
+    if (currentArray.length === 25) {
       let result = document.createElement('div');
       result.innerHTML = '⬤';
       result.className = (currentArray[0] === 1) ? 'circle-1' : 'circle-2';
@@ -66,6 +65,7 @@ function GameSection() {
   const startGame = () => {
     const randomValue = Math.floor(Math.random() * 2) + 1;
     setResults([...resultsRef.current, randomValue]);
+    console.log(resultsRef.current);
   }
 
   return (
@@ -80,8 +80,8 @@ function GameSection() {
               Сделайте предположение и нажмите на одну из кнопок:
             </div>
             <div className="game-section__game-controls">
-              <button className="game-section__game-button">Player</button>
-              <button className="game-section__game-button">Banker</button>
+              <button onClick={startGame} className="game-section__game-button">Player</button>
+              <button onClick={startGame} className="game-section__game-button">Banker</button>
             </div>
           </div>
           <div className="game-section__game-3d-model">
