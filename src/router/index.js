@@ -1,11 +1,11 @@
 import React from 'react';
-import App from '../../App';
+import App from '../App';
 
 import { createHashRouter } from 'react-router-dom';
 
 const router = createHashRouter([
   {
-    path: '/main',
+    path: '/',
     element: <App />
   },
 ]);

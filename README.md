@@ -33,4 +33,4 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ### `node-sass`
 ### `react-three-fiber`
 ### `three-js`
-### `tailwindcss`
+### `prop-types`

@@ -1,13 +1,34 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, {
+  useEffect,
+  useRef,
+  useState
+} from 'react';
 import GameModel from '../GameModel/GameModel';
+import Modal from '../Modal/Modal';
 
 import './GameSection.scss';
 
 function GameSection() {
-
   const [results, setResults] = useState([]);
+  const [toggle, setToggle] = useState(true);
   const resultsRef = useRef();
   resultsRef.current = results;
+
+  const getPercents = (value) => {
+    const currentArray = resultsRef.current;
+    let playerCounter = 0;
+    for (let i = 0; i < currentArray.length; i++) {
+      if (currentArray[i] === 2) {
+        playerCounter++;
+      }
+    }
+    let playerPercent = Math.floor((playerCounter / currentArray.length) * 100);
+    let bankerPercent = 100 - playerPercent;
+    if (value === 'player') {
+      return playerPercent;
+    }
+    return bankerPercent;
+  }
 
   useEffect(() => {
     const resultsArray = [];
@@ -62,16 +83,21 @@ function GameSection() {
     }
   }, [results])
 
-  const startGame = () => {
+  const makeResult = () => {
     const randomValue = Math.floor(Math.random() * 2) + 1;
     setResults([...resultsRef.current, randomValue]);
-    console.log(resultsRef.current);
+    setToggle(true);
+  }
+
+  const startGame = () => {
+    setToggle(false);
+    setTimeout(makeResult, 1000);
   }
 
   return (
     <div className="game-content-wrapper">
       <div className="game-section">
-
+        <Modal active={toggle} player={getPercents('player')} banker={getPercents('banker')} />
         <div className="game-section__game-content">
           <div className="game-section__game-info mobile">
             <div className="game-section__title">Демо-режим</div>

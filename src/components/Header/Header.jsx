@@ -10,7 +10,7 @@ function Header() {
       <img className="page-header__logo-img" src={logo} alt="BaccaratHelper" />
       <div className="page-header__logo">BaccaratHelper</div>
       <nav className="page-header__navigation">
-        <NavLink className="page-header__nav" to="/main">главная</NavLink>
+        <NavLink className="page-header__nav" to="/">главная</NavLink>
         <NavLink className="page-header__nav" to="">открытый код</NavLink>
       </nav>
     </div>
