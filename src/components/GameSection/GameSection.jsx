@@ -10,7 +10,7 @@ import './GameSection.scss';
 
 function GameSection() {
   const [results, setResults] = useState([]);
-  const [toggle, setToggle] = useState(true);
+  const [toggle, setToggle] = useState(false);
   const resultsRef = useRef();
   resultsRef.current = results;
 
@@ -93,6 +93,16 @@ function GameSection() {
     setToggle(false);
     setTimeout(makeResult, 1000);
   }
+
+  window.addEventListener('scroll', () => {
+    if (window.innerWidth > 760 && window.pageYOffset > 700) {
+      setToggle(true);
+    } else if (window.innerWidth < 760 && window.pageYOffset > 1400) {
+      setToggle(true);
+    } else {
+      setToggle(false);
+    }
+  })
 
   return (
     <div className="game-content-wrapper">
