@@ -11,6 +11,8 @@ import './GameSection.scss';
 function GameSection() {
   const [results, setResults] = useState([]);
   const [toggle, setToggle] = useState(false);
+  const [flipValue, setFlipValue] = useState(0);
+  const [startValue, setStartValue] = useState(0);
   const resultsRef = useRef();
   resultsRef.current = results;
 
@@ -83,15 +85,26 @@ function GameSection() {
     }
   }, [results])
 
-  const makeResult = () => {
-    const randomValue = Math.floor(Math.random() * 2) + 1;
-    setResults([...resultsRef.current, randomValue]);
+  const makeResult = (value, lastRotateValue) => {
+    setResults([...resultsRef.current, value]);
     setToggle(true);
+    setStartValue(lastRotateValue);
   }
 
   const startGame = () => {
     setToggle(false);
-    setTimeout(makeResult, 1000);
+    let rotateValue;
+    const randomValue = Math.floor(Math.random() * 2) + 1;
+    if (randomValue === 1) {
+      setStartValue(0);
+      rotateValue = Math.PI * 5;
+      setFlipValue(rotateValue);
+    } else {
+      setStartValue(0);
+      rotateValue = Math.PI * 4;
+      setFlipValue(rotateValue);
+    }
+    setTimeout(() => makeResult(randomValue, rotateValue), 1500);
   }
 
   window.addEventListener('scroll', () => {
@@ -121,7 +134,7 @@ function GameSection() {
             </div>
           </div>
           <div className="game-section__game-3d-model">
-            <GameModel />
+            <GameModel value={flipValue} start={startValue} />
           </div>
           <div className="game-section__game-info hide">
             <div className="game-section__title">Демо-режим</div>

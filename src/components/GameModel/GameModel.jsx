@@ -6,7 +6,9 @@ import { KeyLight, FillLight, RimLight } from '../Models/Light';
 
 import './GameModel.scss';
 
-function GameModel() {
+function GameModel({
+  value, start,
+}) {
   return (
     <div className="game-model-wrapper">
 
@@ -16,7 +18,7 @@ function GameModel() {
           <RimLight brightness={54} color={"#ffffff"} />
           <KeyLight brightness={1} color={"#b560ff"} />
           <Suspense fallback={null}>
-            <Coin />
+            <Coin value={value} startRotation={start} />
           </Suspense>
         </Canvas>
       </div>
