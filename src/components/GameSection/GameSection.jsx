@@ -11,6 +11,7 @@ import './GameSection.scss';
 function GameSection() {
   const [results, setResults] = useState([]);
   const [toggle, setToggle] = useState(false);
+  const [disable, setDisable] = useState(false);
   const [flipValue, setFlipValue] = useState(0);
   const [startValue, setStartValue] = useState(0);
   const resultsRef = useRef();
@@ -88,11 +89,13 @@ function GameSection() {
   const makeResult = (value, lastRotateValue) => {
     setResults([...resultsRef.current, value]);
     setToggle(true);
+    setDisable(false);
     setStartValue(lastRotateValue);
   }
 
   const startGame = () => {
     setToggle(false);
+    setDisable(true);
     let rotateValue;
     const randomValue = Math.floor(Math.random() * 2) + 1;
     if (randomValue === 1) {
@@ -129,8 +132,8 @@ function GameSection() {
               Сделайте предположение и нажмите на одну из кнопок:
             </div>
             <div className="game-section__game-controls">
-              <button onClick={startGame} className="game-section__game-button">Player</button>
-              <button onClick={startGame} className="game-section__game-button">Banker</button>
+              <button disabled={disable} onClick={startGame} className="game-section__game-button">Player</button>
+              <button disabled={disable} onClick={startGame} className="game-section__game-button">Banker</button>
             </div>
           </div>
           <div className="game-section__game-3d-model">
@@ -143,8 +146,8 @@ function GameSection() {
               Сделайте предположение и нажмите на одну из кнопок:
             </div>
             <div className="game-section__game-controls">
-              <button onClick={startGame} className="game-section__game-button">Player</button>
-              <button onClick={startGame} className="game-section__game-button">Banker</button>
+              <button disabled={disable} onClick={startGame} className="game-section__game-button">Player</button>
+              <button disabled={disable} onClick={startGame} className="game-section__game-button">Banker</button>
             </div>
           </div>
         </div>
