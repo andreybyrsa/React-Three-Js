@@ -13,7 +13,11 @@ export function Coin({
     if (startRotation >= value) {
       return;
     }
-    startRotation += 0.3;
+    if (value === Math.PI * 5) {
+      startRotation += value/50;
+    } else {
+      startRotation += value/40;
+    }
   }, []);
   return (
     <group classname="coin" ref={group} dispose={null}>
