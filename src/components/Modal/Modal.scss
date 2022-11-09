@@ -6,9 +6,9 @@
   visibility: hidden;
   justify-content: center;
   align-items: center;
-  animation: slide .4s ease-out forwards;
+  animation: slideDown .4s ease-out forwards;
 
-  @keyframes slide {
+  @keyframes slideDown {
     from {
       top: -60px;
       visibility: hidden;
@@ -38,5 +38,20 @@
   }
   &__statistic:last-child {
     margin-right: 0;
+  }
+}
+
+.position-visible {
+  animation: slideUp .4s ease-out forwards;
+}
+
+@keyframes slideUp {
+  from {
+    top: 60px;
+    visibility: visible;
+  }
+  to {
+    top: -60px;
+    visibility: hidden;
   }
 }

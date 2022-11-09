@@ -11,6 +11,7 @@ import './GameSection.scss';
 function GameSection() {
   const [results, setResults] = useState([]);
   const [toggle, setToggle] = useState(false);
+  const [slider, setSlider] = useState(false);
   const [disable, setDisable] = useState(false);
   const [flipValue, setFlipValue] = useState(0);
   const [startValue, setStartValue] = useState(0);
@@ -89,12 +90,14 @@ function GameSection() {
   const makeResult = (value, lastRotateValue) => {
     setResults([...resultsRef.current, value]);
     setToggle(true);
+    setSlider(false);
     setDisable(false);
     setStartValue(lastRotateValue);
   }
 
   const startGame = () => {
     setToggle(false);
+    setSlider(true);
     setDisable(true);
     let rotateValue;
     const randomValue = Math.floor(Math.random() * 2) + 1;
@@ -110,20 +113,26 @@ function GameSection() {
     setTimeout(() => makeResult(randomValue, rotateValue), 1500);
   }
 
+  let activateSlider = false;
   window.addEventListener('scroll', () => {
     if (window.innerWidth > 760 && window.pageYOffset > 700) {
       setToggle(true);
+      activateSlider = true;
     } else if (window.innerWidth < 760 && window.pageYOffset > 1400) {
       setToggle(true);
+      activateSlider = true;
     } else {
       setToggle(false);
+      if (activateSlider) {
+        setSlider(true);
+      }
     }
   })
 
   return (
     <div className="game-content-wrapper">
       <div className="game-section">
-        <Modal active={toggle} player={getPercents('player')} banker={getPercents('banker')} />
+        <Modal active={toggle} slider={slider} player={getPercents('player')} banker={getPercents('banker')} />
         <div className="game-section__game-content">
           <div className="game-section__game-info mobile">
             <div className="game-section__title">Демо-режим</div>
