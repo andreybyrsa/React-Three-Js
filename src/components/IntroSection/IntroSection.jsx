@@ -18,7 +18,7 @@ function IntroSection() {
             <span style={{color: "#2f55d4"}}>BaccaratHelper</span> - веб расширение
           </div>
           <div className="intro-section__info-description">
-            Веб расширение для игры в Baccarat с применением математического анализа.
+            Веб расширение для игры в Baccarat с применением теории вероятности.
           </div>
           <button className="intro-section__add-button">Добавить</button>
           <div className="intro-section__info-description Chrome">Для Chrome</div>
