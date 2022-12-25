@@ -1,9 +1,15 @@
-.page-header {
-  position: sticky;
-  z-index: 1;
-  top: 0;
-  padding: 0 150px;
+.header {
+  &-wrapper {
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
   display: flex;
+  padding: 0 150px;
   justify-content: space-between;
   align-items: center;
   background-color: #141414;
@@ -44,34 +50,34 @@
 }
 
 @media (max-width: 1200px) {
-  .page-header {
+  .header {
     padding: 0 100px;
   }
 }
 
 @media (max-width: 1200px) {
-  .page-header {
+  .header {
     padding: 0 80px;
   }
 }
 
 @media (max-width: 850px) {
-  .page-header {
+  .header {
     padding: 0 50px;
   }
 }
 
 @media (max-width: 760px) {
-  .page-header {
+  .header {
     padding: 0 20px;
   }
-  .page-header__logo {
+  .header__logo {
     display: none;
   }
-  .page-header__logo-img {
+  .header__logo-img {
     display: block;
   }
-  .page-header__nav {
+  .header__nav {
     margin-right: 15px;
   }
 }
