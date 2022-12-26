@@ -115,10 +115,10 @@ function GameSection() {
 
   let activateSlider = false;
   window.addEventListener('scroll', () => {
-    if (window.innerWidth > 760 && window.pageYOffset > 700) {
+    if (window.innerWidth > 760 && window.pageYOffset > 1100) {
       setToggle(true);
       activateSlider = true;
-    } else if (window.innerWidth < 760 && window.pageYOffset > 1400) {
+    } else if (window.innerWidth < 760 && window.pageYOffset > 1900) {
       setToggle(true);
       activateSlider = true;
     } else {

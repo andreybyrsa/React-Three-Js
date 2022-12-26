@@ -74,4 +74,11 @@
     flex-direction: column;
     height: 450px;
   }
+  .slide__text {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 }

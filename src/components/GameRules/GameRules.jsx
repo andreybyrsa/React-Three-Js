@@ -1,8 +1,10 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper';
 import { cards, table, money } from '../../assets/images';
 
 import 'swiper/css';
+import 'swiper/css/navigation';
 import './GameRules.scss';
 
 const slides = [
@@ -30,8 +32,10 @@ function GameRules() {
   return (
     <div className="game-rules-wrapper">
       <Swiper
+        modules={[Autoplay]}
+        autoplay
+        allowTouchMove={false}
         className="game-rules__swiper"
-        allowTouchMove={true}
       >
         {slides.map((elem) => (
           <SwiperSlide key={elem.id}>
