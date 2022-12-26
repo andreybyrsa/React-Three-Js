@@ -23,6 +23,18 @@ function SideBar({
     sideBarRef.current.classList.remove('active');
     sideBarRef.current.classList.add('no--active');
   }
+  const navigateTo = (value, start) => {
+    if (start) {
+      window.scrollTo(0, 0);
+    } else if (window.innerWidth < 450) {
+      window.scrollTo(0, value);
+    } else if (window.innerWidth > 450 && window.innerWidth < 760) {
+      window.scrollTo(0, value - 100);
+    }
+  }
+  window.addEventListener('scroll', () => {
+    console.log(window.scrollY);
+  })
   return (
     <div
       ref={sideBarRef}
@@ -33,16 +45,16 @@ function SideBar({
       <div className="sidebar-icon-wrapper">
         <ChevronRight className="sidebar__icon" color="white" size={40}/>
       </div>
-      <div className="sidebar-cell">
+      <div onClick={() => navigateTo(0, 'start')} className="sidebar-cell">
         <div className="sidebar-cell__text">главная</div>
       </div>
-      <div className="sidebar-cell">
+      <div onClick={() => navigateTo(690)} className="sidebar-cell">
         <div className="sidebar-cell__text">преимущества</div>
       </div>
-      <div className="sidebar-cell">
+      <div onClick={() => navigateTo(1650)} className="sidebar-cell">
         <div className="sidebar-cell__text">правила игры</div>
       </div>
-      <div className="sidebar-cell">
+      <div onClick={() => navigateTo(2080)} className="sidebar-cell">
         <div className="sidebar-cell__text">демо-режим</div>
       </div>
     </div>
