@@ -1,7 +1,7 @@
 .modal {
   position: fixed;
   z-index: 2;
-  top: -60px;
+  top: -85px;
   display: flex;
   visibility: hidden;
   justify-content: center;
@@ -10,11 +10,11 @@
 
   @keyframes slideDown {
     from {
-      top: -60px;
+      top: -85px;
       visibility: hidden;
     }
     to {
-      top: 60px;
+      top: 85px;
       visibility: visible;
     }
   }
@@ -47,11 +47,11 @@
 
 @keyframes slideUp {
   from {
-    top: 60px;
+    top: 85px;
     visibility: visible;
   }
   to {
-    top: -60px;
+    top: -85px;
     visibility: hidden;
   }
 }

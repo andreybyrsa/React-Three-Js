@@ -13,10 +13,8 @@ function App() {
   const [pageHeight, setPageHeight] = useState(1);
   const [scrollHeight, setScrollHeight] = useState(0);
   window.addEventListener('scroll', () => {
-    setPageHeight(page.current.scrollHeight - 1000);
-    setScrollHeight(window.pageYOffset);
-    console.log(pageHeight);
-    console.log(scrollHeight);
+    setPageHeight(page.current.clientHeight - 900);
+    setScrollHeight(window.scrollY);
   })
   return (
     <div ref={page} className="page-wrapper">

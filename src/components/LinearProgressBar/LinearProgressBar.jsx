@@ -13,10 +13,11 @@ function LinearProgressBar({
     <ProgressBar
       completed={completedNumber}
       borderRadius="0"
-      height="8"
+      height="5px"
       bgColor="#1E47D1FF"
       baseBgColor="transparent"
       customLabel=" "
+      transitionDuration="0.3s"
     />
   );
 }
