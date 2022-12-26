@@ -17,12 +17,10 @@ function LinearProgressBar({
       bgColor="#1E47D1FF"
       baseBgColor="transparent"
       customLabel=" "
-      transitionDuration="0.3s"
+      transitionDuration="0s"
     />
   );
 }
-
-export default LinearProgressBar;
 
 LinearProgressBar.defaultProps = {
   pageHeight: 0,
@@ -33,3 +31,5 @@ LinearProgressBar.propTypes = {
   pageHeight: PropTypes.number,
   scrollHeight: PropTypes.number,
 };
+
+export default LinearProgressBar;
